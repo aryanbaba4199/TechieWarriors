@@ -12,7 +12,6 @@ import axios from "axios";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
 const ContactUs = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -42,29 +41,34 @@ const ContactUs = () => {
 
   return (
     <>
-      <div className="mt-16"></div>
+      <div className="mt-16 px-4 w-full"></div>
       <div className="mb-8">
-        <section className="bg-slate-950 flex w-full h-48">
-          <div className="w-[50%] flex flex-col justify-center items-center">
+        <section className="bg-slate-950 flex w-full md:h-48 h-auto">
+          <div className="md:w-[50%] w-full flex flex-col justify-center items-center">
             <h2 className="text-6xl text-white">Get In Touch</h2>
             <p className="text-white text-lg mt-4">
               Want to get in touch? We'd love to hear from you.
               <br /> Here's how you can reach us.
             </p>
           </div>
-          <div className="w-[50%] flex justify-center items-center">
-            <Image
+          <div className="w-[50%] flex justify-center items-center md:block">
+            {/* <Image
               src="https://cdn-icons-png.flaticon.com/256/476/476860.png"
               width={1000}
               height={1000}
               alt="Alpha Tech Warriors"
               className="w-32 -translate-x-48 rotate-90 -translate-y-8"
-            />
-            <Image src={""} width={1000} className="w-96 h-48" alt="Alpha Tech Warriors" />
+            /> */}
+            {/* <Image
+              src={""}
+              width={1000}
+              className="w-96 h-48"
+              alt="Alpha Tech Warriors"
+            /> */}
           </div>
         </section>
 
-        <section className="flex justify-around items-center ">
+        <section className="flex md:flex-row flex-col justify-around items-center ">
           <div className="w-96 h-80 shadow-lg shadow-black p-8 flex flex-col justify-center items-center mt-4 hover:shadow-2xl hover:shadow-red-600">
             <IoCallSharp className="text-4xl mt-8" />
             <h2
@@ -77,13 +81,16 @@ const ContactUs = () => {
             <p className="mt-4 text-lg">
               Talking to you brings us a lot of joy
             </p>
-            <p className="mt-4 text-blue-700">+91 7005742790</p>
+            <p className="mt-4 text-blue-700">+91 9835776768</p>
             <span className="flex gap-2">
-              <Link href = "https://wa.me/+917005742790" className="mt-4 text-lg text-green-600">
+              <Link
+                href="https://wa.me/+917005742790"
+                className="mt-4 text-lg text-green-600"
+              >
                 Connect on Whatsapp
               </Link>
-              <Link href = "https://wa.me/+917005742790">
-              <FaWhatsapp className="mt-5 text-2xl text-green-600" />
+              <Link href="https://wa.me/+917005742790">
+                <FaWhatsapp className="mt-5 text-2xl text-green-600" />
               </Link>
             </span>
           </div>
@@ -121,7 +128,10 @@ const ContactUs = () => {
                   </svg>
                 </Link>
 
-                <Link href="https://wa.me/+917005742790" className="socialContainer containerFour">
+                <Link
+                  href="https://wa.me/+917005742790"
+                  className="socialContainer containerFour"
+                >
                   <svg className="socialSvg whatsappSvg" viewBox="0 0 16 16">
                     {" "}
                     <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>{" "}
@@ -151,16 +161,16 @@ const ContactUs = () => {
         </section>
 
         <section>
-          <div className="flex p-8 px-24 justify-center items-center w-full mt-8 ">
-            <div className="w1/3">
+          <div className="flex p-8 md:px-24 px-4 justify-center items-center w-full mt-8 ">
+            <div className="md:w1/3 w-full">
               <img
                 src="https://img.freepik.com/free-vector/service-24-7-concept-illustration_114360-7380.jpg?w=740&t=st=1703684344~exp=1703684944~hmac=499314e3db02df0ca3a6626c3bccb824ab1ed256f06019e6c17e094eb9ffcf3e"
-                alt="Floppy Technology"
+                alt="Techi Warriors"
                 className="w-96 -translate-x-6"
               />
             </div>
 
-            <div className="w-[30rem] py-16 px-24 shadow-lg shadow-black hover:shadow-2xl hover:shadow-red-950 hover:border-2 hover:border-red-950">
+            <div className="md:w-[30rem] w-full py-16 px-24 shadow-lg shadow-black hover:shadow-2xl hover:shadow-red-950 hover:border-2 hover:border-red-950">
               <h2 className="text-4xl font-semibold mt-8 bg-gradient-to-r from-black to-red-700 bg-clip-text text-transparent">
                 Get a Callback
               </h2>

@@ -1,8 +1,16 @@
-import React from "react";
+
 import { ServiceData } from "@/pages/api/Constants/basicInfo";
+import AOS from 'aos';
+import { useEffect } from "react";
 
 const Services = () => {
 
+  useEffect(() => {
+    AOS.init({
+      // Options for AOS initialization (if needed)
+    });
+    
+  }, []);
 
   
   return (
@@ -21,14 +29,15 @@ const Services = () => {
             className="hover:cursor-pointer mt-4 hover:z-50 md:mb-0 mb-4 p-2  flex flex-col gap-5 h-72 justify-center m-auto text-start  bg-blue-500 bg-opacity-10 hover:shadow-2xl 
            rounded-lg hover:transition hover:duration-700 shadow-md shadow-black hover:shadow-black hover:ease-in-out hover:text-black hover:bg-white transform hover:-translate-y-1 hover:scale-110   "
           >
-              <p className="text-center text-xl font-bold">
+              <p className="text-center text-xl font-bold" data-aos="fade-up" data-aos-delay={700}>
+
                 {item.title.split(" ")[0]}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500" data-aos="fade-up" data-aos-delay={1000}>
                   {" "}
                   {item.title.split(" ")[1]}{" "}
                 </span>
               </p>
-              <p className="pt-2 text-gray-950">{item.description}</p>
+              <p data-aos="fade-up" data-aos-delay={1700} className="pt-2 text-gray-950">{item.description}</p>
             </div>
           ))}
         </div>
